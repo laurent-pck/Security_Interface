@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Cockpit{% endblock %}
+
+{% block content %}
+    <h1>Cockpit</h1>
+    <form action="{{ url_for('cockpit') }}" method="post">
+        <p>System state:</p>
+        <div>
+            <input id="state-on" name="state" type="radio" value="1">
+            <label for="state-on">ON</label>
+            <input id="state-off" name="state" type="radio" value="0">
+            <label for="state-off">OFF</label>
+        </div>
+        <div>
+            <button type="submit">Confirm</button>
+        </div>
+    </form>
+{% endblock %}
